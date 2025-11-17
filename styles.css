@@ -1,129 +1,114 @@
-
-.lead { font-size: 1.05rem; }
-
-
-/* Simple form styling to echo the example */
-form {
-background: #f8fafc;
-border: 1px solid #e5e7eb;
-border-radius: .5rem;
-padding: 1rem;
-}
-label { display: block; font-weight: 600; margin-top: .5rem; }
-input[type="text"], input[type="email"], textarea, select {
-width: 100%;
-padding: .5rem .6rem;
-margin-top: .25rem;
-border: 1px solid #cbd5e1;
-border-radius: .375rem;
-}
-textarea { min-height: 120px; }
-input[type="submit"], button[type="submit"] {
-margin-top: .75rem;
-background: #166534; /* green submit */
-color: #fff;
-border: 1px solid #14532d;
-padding: .5rem 1rem;
-border-radius: .375rem;
-cursor: pointer;
-}
-input[type="submit"]:hover { filter: brightness(1.05); }
-
-
-ul, ol { padding-left: 1.25rem; }
-
-
-.red { color: #b91c1c; }
-.small { font-size: .92rem; color: var(--muted); }
 /* ===== CSS for CIDM6303 Project (external stylesheet linked on all pages) ===== */
 :root {
---bg: #f5f7ff; /* light, pleasing background */
---text: #0f172a; /* dark text for strong contrast */
---muted: #475569; /* muted text */
---link: #1d4ed8;
---link-hover: #0b3fb8;
-}
-/* ===== CSS for CIDM6303 Project (external stylesheet linked on all pages) ===== */
-:root {
---bg: #f5f7ff; /* light, pleasing background */
---text: #0f172a; /* dark text for strong contrast */
---muted: #475569; /* muted text */
---link: #1d4ed8;
---link-hover: #0b3fb8;
-}
-/* ===== CSS for CIDM6303 Project (external stylesheet linked on all pages) ===== */
-:root {
---bg: #f5f7ff; /* light, pleasing background */
---text: #0f172a; /* dark text for strong contrast */
---muted: #475569; /* muted text */
---link: #1d4ed8;
---link-hover: #0b3fb8;
+  --bg: #f5f7ff;      /* light, pleasing background */
+  --text: #0f172a;    /* dark text for strong contrast */
+  --muted: #475569;   /* muted text */
+  --link: #1d4ed8;
+  --link-hover: #0b3fb8;
 }
 
-
+/* Global reset & body */
 * { box-sizing: border-box; }
 html, body { height: 100%; margin: 0; }
 body {
-font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-line-height: 1.65;
-color: var(--text);
-background: var(--bg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
 }
 
-
+/* Layout */
 header { border-bottom: 1px solid #e5e7eb; padding: 1rem; }
-
-
-/* Main container layout requirement */
 main {
-width: 960px; /* between 800 and 1024px */
-margin: 0 auto; /* centers horizontally */
-padding: 1rem;
+  width: 960px;            /* between 800 and 1024px */
+  margin: 0 auto;          /* center main on page */
+  padding: 1rem;
 }
-
-
-footer { border-top: 1px solid #e5e7eb; padding: 1rem; text-align: center; color: var(--muted); }
+footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 1rem;
+  text-align: center;
+  color: var(--muted);
+}
 figure { margin: 1.5rem 0; }
 figcaption { font-size: .9rem; color: var(--muted); }
 code { background: #f6f8fa; padding: 0 .25rem; border-radius: .25rem; }
 
-
 /* Typography */
-h1 { font-size: 2rem; margin: 0; text-align: center; }
+h1 { font-size: 2rem; margin: 0; text-align: center; } /* centered heading */
 h2 { margin-top: 1rem; font-size: 1.5rem; }
 h3 { margin-top: 1rem; font-size: 1.25rem; }
-p { text-align: left; }
-
+p  { text-align: left; }  /* paragraphs not centered */
 
 /* Links */
 a { color: var(--link); text-decoration: none; }
 a:hover, a:focus { color: var(--link-hover); }
 
-
 /* Navigation styling */
-nav { display: flex; gap: .75rem; margin-top: .5rem; flex-wrap: wrap; justify-content: center; }
+nav {
+  display: flex;
+  gap: .75rem;
+  margin-top: .5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 nav a {
-position: relative;
-padding: .35rem .6rem;
-border-radius: .5rem;
-transition: transform 150ms ease, background-color 150ms ease;
+  position: relative;
+  padding: .35rem .6rem;
+  border-radius: .5rem;
+  transition: transform 150ms ease, background-color 150ms ease;
 }
 nav a::after {
-content: "";
-position: absolute;
-left: .6rem; right: .6rem; bottom: .25rem;
-height: 2px;
-background: currentColor;
-transform: scaleX(0);
-transform-origin: left;
-transition: transform 180ms ease-in-out;
+  content: "";
+  position: absolute;
+  left: .6rem; right: .6rem; bottom: .25rem;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease-in-out;
 }
-nav a:hover::after, nav a:focus::after { transform: scaleX(1); }
+nav a:hover::after,
+nav a:focus::after { transform: scaleX(1); }
 nav a:hover { background: #eef2ff; }
 
-
+/* Lists */
 ul, ol { padding-left: 1.25rem; }
 
-
-.red { color: #b91c1c; }
+/* Utility classes */
+.red   { color: #b91c1c; }        /* use sparingly */
 .small { font-size: .92rem; color: var(--muted); }
+
+/* Lead paragraph */
+.lead { font-size: 1.05rem; }
+
+/* Simple form styling */
+form {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: .5rem;
+  padding: 1rem;
+}
+label { display: block; font-weight: 600; margin-top: .5rem; }
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: .5rem .6rem;
+  margin-top: .25rem;
+  border: 1px solid #cbd5e1;
+  border-radius: .375rem;
+}
+textarea { min-height: 120px; }
+input[type="submit"],
+button[type="submit"] {
+  margin-top: .75rem;
+  background: #166534;  /* green submit */
+  color: #fff;
+  border: 1px solid #14532d;
+  padding: .5rem 1rem;
+  border-radius: .375rem;
+  cursor: pointer;
+}
+input[type="submit"]:hover { filter: brightness(1.05); }
