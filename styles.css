@@ -1,3 +1,57 @@
+
+.lead { font-size: 1.05rem; }
+
+
+/* Simple form styling to echo the example */
+form {
+background: #f8fafc;
+border: 1px solid #e5e7eb;
+border-radius: .5rem;
+padding: 1rem;
+}
+label { display: block; font-weight: 600; margin-top: .5rem; }
+input[type="text"], input[type="email"], textarea, select {
+width: 100%;
+padding: .5rem .6rem;
+margin-top: .25rem;
+border: 1px solid #cbd5e1;
+border-radius: .375rem;
+}
+textarea { min-height: 120px; }
+input[type="submit"], button[type="submit"] {
+margin-top: .75rem;
+background: #166534; /* green submit */
+color: #fff;
+border: 1px solid #14532d;
+padding: .5rem 1rem;
+border-radius: .375rem;
+cursor: pointer;
+}
+input[type="submit"]:hover { filter: brightness(1.05); }
+
+
+ul, ol { padding-left: 1.25rem; }
+
+
+.red { color: #b91c1c; }
+.small { font-size: .92rem; color: var(--muted); }
+/* ===== CSS for CIDM6303 Project (external stylesheet linked on all pages) ===== */
+:root {
+--bg: #f5f7ff; /* light, pleasing background */
+--text: #0f172a; /* dark text for strong contrast */
+--muted: #475569; /* muted text */
+--link: #1d4ed8;
+--link-hover: #0b3fb8;
+}
+/* ===== CSS for CIDM6303 Project (external stylesheet linked on all pages) ===== */
+:root {
+--bg: #f5f7ff; /* light, pleasing background */
+--text: #0f172a; /* dark text for strong contrast */
+--muted: #475569; /* muted text */
+--link: #1d4ed8;
+--link-hover: #0b3fb8;
+}
+/* ===== CSS for CIDM6303 Project (external stylesheet linked on all pages) ===== */
 :root {
 --bg: #f5f7ff; /* light, pleasing background */
 --text: #0f172a; /* dark text for strong contrast */
